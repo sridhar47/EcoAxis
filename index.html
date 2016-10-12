@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css">
+	<link href="http://vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/vendors/scrolloverflow.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.js"></script>
+	<script src="http://vjs.zencdn.net/5.11.7/video.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.min.css">
+</head>
+<body>
+	<div class="main_wrapper">
+		<header class="declaration_hdr">
+			<div class="container hdr_container inter">
+				<div class="row header_row">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 content_cols">
+						<div class="row content_row">
+							<div class="ate">
+								<div class="comp_logo">
+									<img src="images/ate136.png">
+								</div>
+							</div>
+							<div class="teraspin">
+								<div class="client_logo">
+									<img src="images/teraspin202.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 hidden-lg hidden-md hidden-sm login_button1">
+						<span class="login icon-login" data-toggle="modal" data-target="#logInModal">
+						</span>
+					</div>
+					<div class="line hidden-lg hidden-md hidden-sm col-xs-12" style="height:1px; margin-top: 10px; margin-bottom: 5px;">
+						<div style="width: 80%; margin: 0 auto; background-color: rgba(189, 189, 189, 0.72); height: 1px">
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 client">
+						<div class="row title_row">
+							<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 title_row_cols title">
+								building monitoring dashboards
+							</div>
+							<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 title_row_cols desc">
+								Powered by
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 title_row_cols title_img">
+								<img src="images/ecoaxis208.png">
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-1 col-md-1 col-sm-1 col-xs-2 hidden-xs login_button">
+						<span class="login icon-login" data-toggle="modal" data-target="#logInModal">
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="fullpage">
+			<div class="slide_1 section slidenext">
+				<video id="comp_video">
+					<source src="./bebo.mp4" type="video/mp4" />
+	 				<source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
+	 				<source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
+				</video>
+				<div class="slider_body_container">
+					<div class="vertical_slide_btn up_btn">
+						<span class="icon-Up_Arrow up_slide">
+						</span>
+					</div>
+					<div class="container slider_container">
+						<div class="slider_btns">
+							<div class="indv_btn">
+								<span class="btn_icons">
+								</span>
+							</div>
+							<div class="indv_btn">
+								<span class="btn_icons">
+								</span>
+							</div>
+							<div class="indv_btn">
+								<span class="btn_icons">
+								</span>
+							</div>
+						</div>
+						<div class="slides">
+							<div class="vr_slide">
+								<div class="individual_slide active">
+									<div class="slide_content">
+										<div class="slide_left">
+											<div class="icon-left_slide icon_custom">
+											</div>
+											<a class="left carousel-control" href="#myCarouselenergy" role="button" data-slide="prev">
+												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								      			<span class="sr-only">Previous</span>
+								      		</a>
+										</div>
+										<div class="eco_container">
+											<div class="energy_image">
+												<div class="img_container icon-fire">
+												</div>
+											</div>
+											<p class="energy_title title1">
+												energy consumption
+											</p>
+											<div id="myCarouselenergy" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+												<div class="carousel-inner crsl_contr" role="listbox">
+													
+												</div>
+											</div>
+										</div>
+										<div class="slide_right">
+											<div class="icon-right_slide icon_custom">
+											</div>
+											<a class="right carousel-control" href="#myCarouselenergy" role="button" data-slide="next">
+												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									      		<span class="sr-only">Next</span>
+									    	</a>
+										</div>
+									</div>
+								</div>
+								<div class="individual_slide left_space">
+									<div class="slide_content">
+										<div class="slide_left">
+											<div class="icon-left_slide icon_custom">
+											</div>
+											<a class="left carousel-control" href="#myCarouselwater" role="button" data-slide="prev">
+												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								      			<span class="sr-only">Previous</span>
+								      		</a>
+										</div>
+										<div class="eco_container">
+											<div class="energy_image">
+												<div class="img_container icon-water">
+												</div>
+											</div>
+											<p class="energy_title title2">
+												water consumption
+											</p>
+											<div id="myCarouselwater" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+												<div class="carousel-inner crsl_contr" role="listbox">
+												</div>
+											</div>
+										</div>
+										<div class="slide_right">
+											<div class="icon-right_slide icon_custom">
+											</div>
+											<a class="right carousel-control" href="#myCarouselwater" role="button" data-slide="next">
+												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									      		<span class="sr-only">Next</span>
+									    	</a>
+										</div>
+									</div>
+								</div>
+								<div class="individual_slide left_space">
+									<div class="slide_content">
+										<div class="slide_left">
+											<div class="icon-left_slide icon_custom">
+											</div>
+											<a class="left carousel-control" href="#myCarouselgreen" role="button" data-slide="prev">
+												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								      			<span class="sr-only">Previous</span>
+								      		</a>
+										</div>
+										<div class="eco_container">
+											<div class="energy_image">
+												<div class="img_container icon-green">
+												</div>
+											</div>
+											<p class="energy_title title3">
+												green house emission
+											</p>
+											<div id="myCarouselgreen" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+												<div class="carousel-inner crsl_contr" role="listbox">
+												</div>
+											</div>
+										</div>
+										<div class="slide_right">
+											<div class="icon-right_slide icon_custom">
+											</div>
+											<a class="right carousel-control" href="#myCarouselgreen" role="button" data-slide="next">
+												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+									      		<span class="sr-only">Next</span>
+									    	</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="vertical_slide_btn down_btn">
+						<span class="icon-Down_Arrow down_slide">
+						</span>
+					</div>
+				</div>
+				<div class="slider_body_footer">
+					<div class="container footer_container">
+						<div class="row ftr_row">
+							<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 env_info">
+								<p class="env_info_indv">
+									Based on G4-EN15 to G4-EN17 of the Specific Standard Disclosures
+									(Category Environmental) pertaining to GRI Sustainability Reporting Guide-lines.
+								</p>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 video_watch">
+								<div class="video_icon">
+									<span class="icon-video custom_icon">
+									</span>
+								</div>
+								<div class="video_text">
+									watch video
+								</div>
+							</div>
+						</div>
+						<div class="logo_contr">
+							<div class="env_logo">
+							</div>
+							<div class="globe icon-global">
+							</div>
+						</div>
+					</div>
+				</div>
+		  	</div>
+		  	<div class="slide_2 section slidenext">
+		  		<div class="container leader_container">
+	  				<div class="leader_header">
+	  					leader speak
+			  		</div>
+			  		<div class="row ldr_spec">
+				  		<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 leader_msg">
+				  			<div class="ldr_speech">
+				  				<p class="ldr_msg_para">
+					  				If you're automatically sure that you know what reality is and who and what is really important, if you want to operate on your default setting, then you, like me, probably won't consider possibilities that aren't annoying and miserable. But if you've really learned how to think, how to pay attention, then you'll know you have other options. It will actually be within your power to experience a crowded, hot, slow, consumer hell-type situation as not only meaningful, but sacred -- on fire with the same force that lit the stars: love, fellowship, the mystical oneness of all things deep down.
+					  			</p>
+					  			<p class="ldr_msg_para">
+					  				If you're automatically sure that you know what reality is and who and what is really important, if you want to operate on your default setting, then you, like me, probably won't consider possibilities that aren't annoying and miserable. But if you've really learned how to think, how to pay attention, then you'll know you have other options. It will actually be within your power to experience a crowded, hot, slow, consumer hell-type situation as not only meaningful, but sacred -- on fire with the same force that lit the stars: love, fellowship, the mystical oneness of all things deep down.
+					  				Either we heal as a team or we’re gonna crumble, inch by inch, play by play, till we’re finished. We’re in hell right now, gentlemen, believe me. And we can stay here and get the $&#@ kicked out of us, or we can fight our way back into the light. We can climb out of hell, one inch at a time."
+					  			</p>
+					  			<p class="ldr_msg_para">
+					  				If you're automatically sure that you know what reality is and who and what is really important, if you want to operate on your default setting, then you, like me, probably won't consider possibilities that aren't annoying and miserable. But if you've really learned how to think, how to pay attention, then you'll know you have other options. It will actually be within your power to experience a crowded, hot, slow, consumer hell-type situation as not only meaningful, but sacred -- on fire with the same force that lit the stars: love, fellowship, the mystical oneness of all things deep down.
+					  				Either we heal as a team or we’re gonna crumble, inch by inch, play by play, till we’re finished. We’re in hell right now, gentlemen, believe me. And we can stay here and get the $&#@ kicked out of us, or we can fight our way back into the light. We can climb out of hell, one inch at a time."
+					  			</p>
+				  			</div>
+				  			<div class="ldr_extra_info">
+				  				<a href="" >read more</a>
+				  			</div>	
+				  		</div>
+				  		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 leader_img">
+			  				<div class="ldr_img_container">
+				  				<div class="ldr_id">
+				  					<img src="images/profPic.jpg" class="comp_imgs">
+				  				</div>
+				  				<p class="ldr_name">anuj bhagwati</p>
+				  			</div>
+				  		</div>
+			  		</div>
+		  		</div>
+		  	</div>
+		  	<div class="slide_3 section slidenext">
+		  		<div class="client_slider">
+		  			<div class="container client_container">
+			  			<div class="client_descrbr">
+			  				<div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 about_client">
+				  				<div class="client_descr">
+									<p class="client_header">
+										about teraspin | ate facility
+									</p>
+									<div class="client_para">
+										Our vision is to be a “value driven, world class group, spearheading innovative and sustainable solutions”. Working towards this vision, A.T.E. has developed 5 core technologies – textile spinning, M2M, wastewater treatment, heat exchange, static and ink control. We have several patents to our credit. Our core technologies are developed through our deep domain expertise in the fields, assimilation of customer insights, dedicated research and development, as well as our commitment to addresses customers’ business and technology demands sustainably. Manufactures precision spinning machinery components comprising drafting systems, spindles, and other precision spinning machinery components and accessories under the brand TeraSpin. Designs and manufactures indirect and direct evaporative cooling products with the innovative heat exchanger technology – DAMA (Dry Air Moist Air) – at their core. Also manufactures air-to-air heat exchangers that conserve energy and provides operational savings. The IoT-based continuous remote monitoring system enables effective and efficient management of industrial plants and equipment. Already productised for various segments, this technology allows for the seamless integration of data acquisition, M2M communications into a real or near real-time database, Big Data analytics, and industrial process know how. Designs and manufactures static control and ink handling and conditioning systems that are designed to improve safety, productivity, and quality for a plethora of industries. Introduced several innovations in the field of industrial wastewater treatment such as AAA (anerobic, aerobic, air flotation), AVR (Anerobic Venturi Reactor), AHR (Anaerobic Hybric Reactor) and the like.
+									</div>
+									<a class="read_more" data-toggle="modal" data-target="#ClientModal">
+										read more
+									</a>
+								</div>
+				  			</div>
+				  			<div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 client_features">
+								<div class="feature">
+									feature
+								</div>
+								<div class="feature_container">
+									<div class="feature_slider">
+										<div class="energy_slide_left ftr_left">
+											<div class="icon-left_arrow custom_angle">
+												<a class="left carousel-control" href="#myCarouselFtr" role="button" data-slide="prev">
+											      	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+											      	<span class="sr-only">Previous</span>
+											    </a>
+											</div>
+										</div>
+										<div id="myCarouselFtr" class="carousel slide ftrs" data-ride="carousel">
+											<ol class="carousel-indicators ftr_indcrs">
+												<li data-target="#myCarousel" data-slide-to="0" class="ftr_indv active"></li>
+												<li data-target="#myCarousel" data-slide-to="1" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="2" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="3" class="ftr_indv"></li>
+										    </ol>
+									    	<div class="carousel-inner ftrs_content" role="listbox" data-toggle="modal" data-target="#featureModal">
+											    <div class="item active">
+											    	<div class="ftr_title_container">
+														<p class="ftr_title">
+															here is my title
+														</p>
+													</div>
+													<div class="ftr_descr">
+														Our vision is to be a “value driven, world class group, spearheading innovative and sustainable solutions”. Working towards this vision, A.T.E. has developed 5 core technologies – textile spinning, M2M, wastewater treatment, heat exchange, static and ink control. We have several patents to our credit. Our core technologies are developed through our deep domain expertise in the fields, assimilation of customer insights, dedicated research and development, as well as our commitment to addresses customers’ business and technology demands sustainably. Manufactures precision spinning machinery components comprising drafting systems, spindles, and other precision spinning machinery components and accessories under the brand TeraSpin. Designs and manufactures indirect and direct 
+													</div>
+											    </div>
+											    <div class="item">
+											    	<div class="ftr_title_container">
+														<p class="ftr_title">
+															here is my title
+														</p>
+													</div>
+													<div class="ftr_descr">
+														Our vision is to be a “value driven, world class group, spearheading innovative and sustainable solutions”. Working towards this vision, A.T.E. has developed 5 core technologies – textile spinning, M2M, wastewater treatment, heat exchange, static and ink control. We have several patents to our credit. Our core technologies are developed through our deep domain expertise in the fields, assimilation of customer insights, dedicated research and development, as well as our commitment to addresses customers’ business and technology demands sustainably. Manufactures precision spinning machinery components comprising drafting systems, spindles, and other precision spinning machinery components and accessories under the brand TeraSpin. Designs and manufactures indirect and direct 
+													</div>
+											    </div>
+											    <div class="item">
+											    	<div class="ftr_title_container">
+														<p class="ftr_title">
+															here is my title
+														</p>
+													</div>
+													<div class="ftr_descr">
+														Our vision is to be a “value driven, world class group, spearheading innovative and sustainable solutions”. Working towards this vision, A.T.E. has developed 5 core technologies – textile spinning, M2M, wastewater treatment, heat exchange, static and ink control. We have several patents to our credit. Our core technologies are developed through our deep domain expertise in the fields, assimilation of customer insights, dedicated research and development, as well as our commitment to addresses customers’ business and technology demands sustainably. Manufactures precision spinning machinery components comprising drafting systems, spindles, and other precision spinning machinery components and accessories under the brand TeraSpin. Designs and manufactures indirect and direct 
+													</div>
+											    </div>
+											    <div class="item">
+											    	<div class="ftr_title_container">
+														<p class="ftr_title">
+															here is my title
+														</p>
+													</div>
+													<div class="ftr_descr">
+														Our vision is to be a “value driven, world class group, spearheading innovative and sustainable solutions”. Working towards this vision, A.T.E. has developed 5 core technologies – textile spinning, M2M, wastewater treatment, heat exchange, static and ink control. We have several patents to our credit. Our core technologies are developed through our deep domain expertise in the fields, assimilation of customer insights, dedicated research and development, as well as our commitment to addresses customers’ business and technology demands sustainably. Manufactures precision spinning machinery components comprising drafting systems, spindles, and other precision spinning machinery components and accessories under the brand TeraSpin. Designs and manufactures indirect and direct 
+													</div>
+											    </div>
+											</div>
+										</div>
+										<div class="energy_slide_right ftr_right">
+											<div class="icon-right_arrow custom_angle">
+												<a class="right carousel-control" href="#myCarouselFtr" role="button" data-slide="next">
+											      	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+											      	<span class="sr-only">Next</span>
+											    </a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+			  			</div>
+			  		</div>
+		  		</div>
+		  		<footer class="social_ftr inter">
+		  			<div class="container ftr_container">
+		  				<div class="row ftr_row">
+		  					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 ftr_info">
+		  						Copyright @ 2015, A.T.E private limited. All Right Reserved. CIN: U5987MH6551234TY78875 .
+		  					</div>
+		  					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ftr_icons">
+		  						<div class="info_para">
+		  							Follow us: 
+		  						</div>
+		  						<div class="social_icons">
+		  							<div class="indv_icon">
+		  								<a href="#" class="icon-linkdin">
+		  								</a>
+		  							</div>
+		  							<div class="indv_icon left_pad">
+		  								<a href="#" class="icon-fb">
+		  								</a>
+		  							</div>
+		  						</div>
+		  					</div>
+		  				</div>
+		  			</div>
+	  			</footer>
+		  	</div>
+		</div>
+	</div>
+
+
+  	<div class="modal fade" id="logInModal" role="dialog">
+		<div class="modal-dialog login_dialog">
+  			<div class="modal-content login_content">
+    			<div class="modal-header login_header">
+      				<button type="button" class="close" data-dismiss="modal">&times;</button>
+    			</div>
+        		<div class="modal-body credential">
+        			<div class="login_box">
+        				<h4 class="input_header">please enter your credentials to continue</h4>
+          				<input type="email" id="user_mail" class="auth" placeholder="Enter your email and press enter">
+          				<input type="password" id="user_pwd" class="auth" placeholder="Enter your password and press enter">
+        			</div>
+        		</div>
+  			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="ClientModal" role="dialog">
+		<div class="modal-dialog read_more_dialog">
+  			<div class="modal-content rm_content">
+    			<div class="modal-header rm_hdr">
+      				<button type="button" class="close" data-dismiss="modal">&times;</button>
+      				<h4 class="modal-title rm_title"></h4>
+    			</div>
+        		<div class="modal-body more_content">
+          			
+        		</div>
+  			</div>
+		</div>
+  	</div>
+
+  	<div class="modal fade" id="featureModal" role="dialog">
+		<div class="modal-dialog ftr_dialog_popup">
+  			<div class="modal-content ftr_content_popup">
+				<div class="modal-header ftr_hdr_popup">
+	  				<button type="button" class="close" data-dismiss="modal">&times;</button>
+	  				<h4 class="modal-title ftr_title_popup"></h4>
+				</div>
+	    		<div class="modal-body ftr_body_popup">
+	      			<div class="popup_img">
+	  					<div class="pimg_indv left_img">
+	  					</div>
+	  					<div class="pimg_indv right_img">
+	  					</div>
+	      			</div>
+	      			<div class="ftr_popup_text">
+	      			</div>
+	    		</div>
+  			</div>
+		</div>
+  	</div>
+
+<script type="text/javascript" src="css/main.min.js"></script>
+</body>
+</html>

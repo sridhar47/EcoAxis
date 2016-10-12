@@ -1,0 +1,196 @@
+@import "reset.less";
+@import "firstSlide.less";
+@import "secondSlide.less";
+@import "thirdSlide.less";
+@import "media.less";
+
+.carousel-control.right {
+	width: 100%;
+	background-image: none;
+	.glyphicon {
+		opacity: 0;
+	}
+}
+.carousel-control.left {
+	width: 100%;
+	background-image: none;
+	.glyphicon {
+		opacity: 0;
+	}
+}
+html {
+	.modal-open {
+		#logInModal {
+			padding-right: 0px;
+			padding-left: 0px;
+			z-index: 9999999;
+			.login_dialog {
+				width: 100%;
+				margin: 0px;
+				.login_content {
+					border-radius: 0px;
+					background-color: rgba(255, 255, 255, 0.7);
+					.login_header {
+						text-align: center;
+			    		text-transform: uppercase;
+			    		border-bottom: 0px;
+			    		padding-right: 95px;
+			    		.login_title {
+			    			color: #279a35;
+			    		}
+			    		button {
+			    			font-size: 60px;
+						    color: #096b16;
+						    opacity: 1;
+						    outline: none;
+			    		}
+					}
+				}
+				.credential {
+					padding: 50px 0px;
+					text-align: center;
+					.login_box {
+						width: 80%;
+						margin: 0 auto;
+						background-color: #fff;
+						opacity: 1;
+						background-color: #fff;
+						padding: 30px 0px;
+						.input_header {
+							text-transform: uppercase;
+						    color: #096b16;
+						    font-weight: bold;
+						    margin-bottom: 60px;
+						    margin-top: 0px;
+						}
+						input {
+							transition: all 0.2s;
+							width: 50%;
+							border: none;
+							outline: none;
+							height: 40px;
+							border-bottom: 2px solid #279a35;
+							font-size: 20px;
+							color: #595959;
+						}
+						#user_pwd {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		#ClientModal {
+			z-index: 9999999;
+			.read_more_dialog {
+				margin-top: 5%;
+				width: 100%;
+    			margin: 0;
+				.rm_content {
+					border-radius: 0px;
+					    border-bottom: 0px;
+    					padding-top: 35px;
+					.rm_hdr {
+						text-align: center;
+					    text-transform: uppercase;
+					    font-size: 17px;
+					    color: #16a085;
+					    font-weight: bolder;
+					    padding-right: 95px;
+					    border-bottom: 0px;
+					    button {
+					    	    margin-top: -20px;
+							    font-size: 60px;
+							    color: green;
+							    opacity: 1;
+							    outline: none;
+					    }
+					}
+					.more_content {
+						font-size: 20px;
+						color: #595959;
+						padding: 30px 70px 60px;
+		    			line-height: 30px;
+					}
+				}
+			}
+		}
+		#featureModal {
+			background: rgba(255, 255, 255, 0.78);
+			z-index: 9999999;
+			padding-right: 0px;
+			.ftr_dialog_popup {
+				width: 100%;
+				position: relative;
+				margin: 0px;
+				.ftr_content_popup {
+					border-radius: 0;
+					box-shadow: none;
+					z-index: 9999999;
+					.ftr_hdr_popup {
+						border-bottom: 0px;
+						padding-right: 95px;
+						padding-top: 35px;
+						.close {
+							font-size: 60px;
+		    				color: #047d04;
+		    				margin-top: -20px;
+		    				opacity: 1;
+		    				font-weight: normal;
+		    				outline: none;
+						}
+						.ftr_title_popup {
+							text-align: center;
+						    text-transform: uppercase;
+						    font-size: 17px;
+						    color: #16a085;
+						    font-weight: bolder;
+						}
+					}
+					.ftr_body_popup {
+						padding: 70px;
+						.popup_img {
+							width: 100%;
+							padding: 0px 100px 30px;
+							overflow: hidden;
+							.pimg_indv {
+								width: 44%;
+								display: inline-block;
+							}
+							.left_img {
+								height: 200px;
+								float: left;
+							}
+							.right_img {
+								height: 200px;
+								float: right;
+							}
+						}
+						.ftr_popup_text {
+							clear: both;
+							color: #595959;
+							font-size: 17px;
+							line-height: 20px;
+							text-align: center;     
+							text-align: -webkit-center;
+						}
+					}
+				}
+			}
+		}
+		#user_mail::-webkit-input-placeholder {
+		   text-align: center;
+		}
+		#user_mail:-moz-placeholder {
+		   text-align: center;  
+		}
+		#user_mail::-moz-placeholder {
+		   text-align: center;  
+		}
+		#user_mail:-ms-input-placeholder {  
+		   text-align: center; 
+		}
+
+	}
+}
+

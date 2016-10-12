@@ -1,0 +1,30 @@
+{
+  "name": "ecoaxis",
+  "version": "1.0.0",
+  "description": "ecoaxis ate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-livereload": "^0.1.2",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-image-sprite": "^0.1.1",
+    "grunt-open": "^0.2.3",
+    "grunt-regarde": "^0.1.1",
+    "grunt-spritesmith": "^6.3.1",
+    "less": "^2.7.1",
+    "serve-static": "^1.11.1"
+  }
+}
