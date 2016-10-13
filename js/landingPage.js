@@ -164,21 +164,23 @@ $(document).ready(function() {
         sectionSelector: '.section',
         slideSelector: '.slideme',
         // scrollbars: false,
+        normalScrollElements: '.slide_4'
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
+    console.log("$('.slider_body_footer').height()", $('.slider_body_footer').height());
     var padding = (p/2) + 'px 0';
     $('.slider_body_container').css({
         'padding': padding
     });
     var sl3Pad = $('.fp-tableCell').height() - $('.client_descrbr').height();
-    console.log("$('.client_descrbr').height()", $('.client_descrbr').height());
-    console.log("$('.fp-tableCell').height()", $('.fp-tableCell').height());
-    console.log("sl3Pad", sl3Pad);
     sl3Pad = (sl3Pad / 2) + 'px 0';
-    console.log("sl3Pad", sl3Pad);
     $('.client_container').css({'padding': sl3Pad});
-
+    $('.slide_4.section.social_ftr').css({'height': '100px'});
+    $('.slide_4.section.social_ftr .fp-tableCell').css({'height': 100 + 'px'});
+    var ftrPad = $('.slide_4.section.social_ftr .fp-tableCell').height() - $('.container.ftr_container').height();
+    ftrPad = (ftrPad / 2) + 'px 0';
+    $('.slide_4.section.social_ftr').css({'padding': ftrPad});
     var totalSlides = $(".vr_slide .individual_slide").length;
     var maxPos = (totalSlides - 1) * 330;
     var activeEleIdx = $(".individual_slide.active").index();
@@ -219,19 +221,22 @@ $(document).ready(function() {
         }
     });
     $(".custom_icon").click(function() {
-        var videoStatus = $("#comp_video").css("display");
+        var videoStatus = $(".video_container").css("display");
         if (videoStatus == "block") {
             var myPlayer = videojs("comp_video");
             myPlayer.pause();
-            $("#comp_video").css("display", "none");
+            $(".video_container").css("display", "none");
             $(".video_text").text("watch video");
 
         } else {
+            var topPad = $('.declaration_hdr').height();
             var browserHeight = $(window).height();
-            browserHeight = 0.5 * browserHeight;
-            $("#comp_video").css({"display" : "block", "height" : browserHeight + "px"});
+            browserHeight = 0.7 * browserHeight;
+            $(".video_container").css({"display" : "block", "height": browserHeight, "top": topPad + "px"});
             $("#comp_video").addClass("video-js vjs-default-skin vjs-big-play-centered");
-
+            var vHght = $(".video_container").height();
+            var vWdth = $(".video_container").width();
+            $("video").attr({"height": vHght, "width": vWdth});
             videojs("comp_video", {"controls": true, "autoplay": false, "preload": "auto"}, function(){
                 var myPlayer = this;
                 myPlayer.play();
