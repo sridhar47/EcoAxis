@@ -164,11 +164,14 @@ $(document).ready(function() {
         sectionSelector: '.section',
         slideSelector: '.slideme',
         // scrollbars: false,
-        normalScrollElements: '.slide_4'
+        normalScrollElements: '.slide_4',
+        afterResize: function () {
+            $('.slide_4.section.social_ftr').css({'height': 100 + "px"});
+            $('.slide_4.section.social_ftr .fp-tableCell').css({'height': 100 + 'px'});
+        }
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
-    console.log("$('.slider_body_footer').height()", $('.slider_body_footer').height());
     var padding = (p/2) + 'px 0';
     $('.slider_body_container').css({
         'padding': padding
@@ -176,7 +179,7 @@ $(document).ready(function() {
     var sl3Pad = $('.fp-tableCell').height() - $('.client_descrbr').height();
     sl3Pad = (sl3Pad / 2) + 'px 0';
     $('.client_container').css({'padding': sl3Pad});
-    $('.slide_4.section.social_ftr').css({'height': '100px'});
+    $('.slide_4.section.social_ftr').css({'height': 100 + "px"});
     $('.slide_4.section.social_ftr .fp-tableCell').css({'height': 100 + 'px'});
     var ftrPad = $('.slide_4.section.social_ftr .fp-tableCell').height() - $('.container.ftr_container').height();
     ftrPad = (ftrPad / 2) + 'px 0';
