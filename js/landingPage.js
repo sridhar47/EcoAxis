@@ -152,11 +152,11 @@ $(document).ready(function() {
         
     }
     var totalHeight = parseInt($(".hdr_container").css('height'), 10);
-    $("#fullpage").css({
-        'padding-top': totalHeight
-    });
+    // $("#fullpage").css({
+    //     'padding-top': totalHeight
+    // });
     $("#fullpage").fullpage({
-        // paddingTop: totalHeight,
+        paddingTop: totalHeight,
         scrollOverflow: true,
         scrollOverflowOptions: true,
         fadeScrollbars: true,
@@ -165,6 +165,13 @@ $(document).ready(function() {
         slideSelector: '.slideme',
         scrollbars: false,
     });
+
+    var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
+    var padding = (p/2) + 'px 0'
+    $('.slider_body_container').css({
+        'padding': padding
+    })
+
     var totalSlides = $(".vr_slide .individual_slide").length;
     var maxPos = (totalSlides - 1) * 330;
     var activeEleIdx = $(".individual_slide.active").index();

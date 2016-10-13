@@ -59,11 +59,14 @@ module.exports = function(grunt) {
 
         uglify: {
             options: {
+                compress: {
+                    drop_console: true
+                },
                 mangle: false
             },
             target: {
                 files: {
-                    'css/main.min.js': ['js/landingPage.js']
+                    'js/main.min.js': ['js/landingPage.js']
                 }
             }
         },
