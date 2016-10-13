@@ -157,13 +157,13 @@ $(document).ready(function() {
     // });
     $("#fullpage").fullpage({
         paddingTop: totalHeight,
-        scrollOverflow: true,
-        scrollOverflowOptions: true,
-        fadeScrollbars: true,
-        shrinkScrollbars: 'clip',
+        // scrollOverflow: true,
+        // scrollOverflowOptions: true,
+        // fadeScrollbars: true,
+        // shrinkScrollbars: 'clip',
         sectionSelector: '.section',
         slideSelector: '.slideme',
-        scrollbars: false,
+        // scrollbars: false,
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
