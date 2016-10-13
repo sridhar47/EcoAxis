@@ -60,7 +60,7 @@ module.exports = function(grunt) {
         uglify: {
             options: {
                 compress: {
-                    drop_console: true
+                    // sdrop_console: true
                 },
                 mangle: false
             },
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 }
             },
             js: {
-                files: ['js/*'],
+                files: ['js/landingPage.js'],
                 tasks: ['uglify'],
                 options: {
                     livereload: true,

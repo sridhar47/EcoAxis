@@ -167,10 +167,17 @@ $(document).ready(function() {
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
-    var padding = (p/2) + 'px 0'
+    var padding = (p/2) + 'px 0';
     $('.slider_body_container').css({
         'padding': padding
-    })
+    });
+    var sl3Pad = $('.fp-tableCell').height() - $('.client_descrbr').height();
+    console.log("$('.client_descrbr').height()", $('.client_descrbr').height());
+    console.log("$('.fp-tableCell').height()", $('.fp-tableCell').height());
+    console.log("sl3Pad", sl3Pad);
+    sl3Pad = (sl3Pad / 2) + 'px 0';
+    console.log("sl3Pad", sl3Pad);
+    $('.client_container').css({'padding': sl3Pad});
 
     var totalSlides = $(".vr_slide .individual_slide").length;
     var maxPos = (totalSlides - 1) * 330;
