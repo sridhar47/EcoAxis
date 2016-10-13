@@ -152,8 +152,11 @@ $(document).ready(function() {
         
     }
     var totalHeight = parseInt($(".hdr_container").css('height'), 10);
+    $("#fullpage").css({
+        'padding-top': totalHeight
+    });
     $("#fullpage").fullpage({
-        paddingTop: totalHeight,
+        // paddingTop: totalHeight,
         scrollOverflow: true,
         scrollOverflowOptions: true,
         fadeScrollbars: true,
