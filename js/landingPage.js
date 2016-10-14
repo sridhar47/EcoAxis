@@ -148,27 +148,29 @@ $(document).ready(function() {
             }
             var car = $(currCarousel).find(".carousel-inner.crsl_contr").append(itm);
             console.log("car", car);
-        }
-        
+        } 
     }
     var totalHeight = parseInt($(".hdr_container").css('height'), 10);
-    // $("#fullpage").css({
-    //     'padding-top': totalHeight
-    // });
     $("#fullpage").fullpage({
         paddingTop: totalHeight,
-        // scrollOverflow: true,
-        // scrollOverflowOptions: true,
-        // fadeScrollbars: true,
-        // shrinkScrollbars: 'clip',
         sectionSelector: '.section',
         slideSelector: '.slideme',
-        // scrollbars: false,
         normalScrollElements: '.slide_4',
         afterResize: function () {
             $('.slide_4.section.social_ftr').css({'height': 100 + "px"});
             $('.slide_4.section.social_ftr .fp-tableCell').css({'height': 100 + 'px'});
-        }
+        },
+        // onLeave : function (index, nextIndex, direction) {
+        //     console.log("index", index);
+        //     console.log("nextIndex", nextIndex);
+        //     console.log("direction", direction);
+        //     if((direction == "up" || direction == "down") && (nextIndex == 2)) {
+        //         console.log("We are in 2");
+        //         $("#fullpage").css({"padding-top": totalHeight + "px"});
+        //     } else {
+        //         document.getElementById('fullpage').style['padding-top'] = null;
+        //     }
+        // }
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
@@ -192,6 +194,8 @@ $(document).ready(function() {
     $(".vr_slide").css("top", "-" + activePos + "px");
     var currBtn = $(".indv_btn").eq(activeEleIdx - 1);
     $(currBtn).find(".btn_icons").addClass("active_btn");
+    var ldrMsgMaxHgt = $('.fp-tableCell').height() - 70;
+    $(".leader_msg").css({"max-height": ldrMsgMaxHgt + "px"})
     $(".up_slide").click(function() {
         var currPos = parseInt($(".vr_slide").css("top"), 10);
         var currPosNeg = - currPos;
@@ -267,8 +271,6 @@ $(document).ready(function() {
     });
     var setTopPos = function() {
         var totalHeight = parseInt($(".hdr_container").css('height'), 10);
-        // var topPad = parseInt($(".hdr_container").css('padding-top'), 10);
-        // var btmPad = parseInt($(".hdr_container").css('padding-bottom'), 10);
         var topPos = totalHeight;
         $(".slide_1").css({"padding-top": topPos});
     }
