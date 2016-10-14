@@ -1,0 +1,85 @@
+[
+    {"energyconsumption": [{
+                                "name": "ee-ytd",
+                                "displayname":"Electrical Energy YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"88890",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":true
+                            }, {
+                                "name": "ee-ytd",
+                                "displayname":"Electrical Energy YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"98676",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":false
+                            }, {
+                                "name": "ee-ytd",
+                                "displayname":"Electrical Energy YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"98690",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":true
+                            }
+                        ]
+    },
+    {"waterconsumption" : [{
+                                "name": "per-capita-emissions-ytd",
+                                "displayname":"Per Capita GHG Emissions YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"98690",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":false
+                            }, {
+                                "name": "per-capita-emissions-ytd",
+                                "displayname":"Per Capita GHG Emissions YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"88890",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":true
+                            }, {
+                                "name": "per-capita-emissions-ytd",
+                                "displayname":"Per Capita GHG Emissions YTD",
+                                "uom":"kWh",
+                                "value":"98665",
+                                "rvalue":"88890",
+                                "rvaluedesc":"Same period last year",
+                                "thresholdflag":false
+                            }
+                        ]
+    },
+    {"gasemission" : [{
+                        "name": "per-capita-emissions-ytd",
+                        "displayname":"Per Capita GHG Emissions YTD",
+                        "uom":"kWh",
+                        "value":"98665",
+                        "rvalue":"88890",
+                        "rvaluedesc":"Same period last year",
+                        "thresholdflag":true
+                        },
+                        {
+                            "name": "per-capita-emissions-ytd",
+                            "displayname":"Per Capita GHG Emissions YTD",
+                            "uom":"kWh",
+                            "value":"98665",
+                            "rvalue":"98690",
+                            "rvaluedesc":"Same period last year",
+                            "thresholdflag":false
+                        }, 
+                        {
+                            "name": "per-capita-emissions-ytd",
+                            "displayname":"Per Capita GHG Emissions YTD",
+                            "uom":"kWh",
+                            "value":"98665",
+                            "rvalue":"88890",
+                            "rvaluedesc":"Same period last year",
+                            "thresholdflag":true
+                        }
+                    ]
+    }
+]

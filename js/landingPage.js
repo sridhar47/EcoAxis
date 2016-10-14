@@ -1,154 +1,81 @@
 $(document).ready(function() {
-    var energyValues =  
-    [
-    {"energyconsumption": [{
-                                "name": "ee-ytd",
-                                "displayname":"Electrical Energy YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"88890",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":true
-                            }, {
-                                "name": "ee-ytd",
-                                "displayname":"Electrical Energy YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"98676",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":false
-                            }, {
-                                "name": "ee-ytd",
-                                "displayname":"Electrical Energy YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"98690",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":true
-                            }
-                        ]
-    },
-    {"waterconsumption" : [{
-                                "name": "per-capita-emissions-ytd",
-                                "displayname":"Per Capita GHG Emissions YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"98690",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":false
-                            }, {
-                                "name": "per-capita-emissions-ytd",
-                                "displayname":"Per Capita GHG Emissions YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"88890",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":true
-                            }, {
-                                "name": "per-capita-emissions-ytd",
-                                "displayname":"Per Capita GHG Emissions YTD",
-                                "uom":"kWh",
-                                "value":"98665",
-                                "rvalue":"88890",
-                                "rvaluedesc":"Same period last year",
-                                "thresholdflag":false
-                            }
-                        ]
-    },
-    {"gasemission" : [{
-                        "name": "per-capita-emissions-ytd",
-                        "displayname":"Per Capita GHG Emissions YTD",
-                        "uom":"kWh",
-                        "value":"98665",
-                        "rvalue":"88890",
-                        "rvaluedesc":"Same period last year",
-                        "thresholdflag":true
-                        },
-                        {
-                            "name": "per-capita-emissions-ytd",
-                            "displayname":"Per Capita GHG Emissions YTD",
-                            "uom":"kWh",
-                            "value":"98665",
-                            "rvalue":"98690",
-                            "rvaluedesc":"Same period last year",
-                            "thresholdflag":false
-                        }, 
-                        {
-                            "name": "per-capita-emissions-ytd",
-                            "displayname":"Per Capita GHG Emissions YTD",
-                            "uom":"kWh",
-                            "value":"98665",
-                            "rvalue":"88890",
-                            "rvaluedesc":"Same period last year",
-                            "thresholdflag":true
-                        }
-                    ]
-    }
-];
-    for(var i = 0; i < energyValues.length; i++) {
-        if(i == 0) {
-            var currCarousel = $("#myCarouselenergy");
-            var type = "type1";
-            var amount = "amount1";
-        } else if (i == 1) {
-            var currCarousel = $("#myCarouselwater");
-            var type = "type2";
-            var amount = "amount2";
-        } else if(i == 2) {
-            var currCarousel = $("#myCarouselgreen");
-            var type = "type3";
-            var amount = "amount3";
-        }
-        var key = Object.keys(energyValues[i]);
 
-        var engs = energyValues[i][key[0]];
-        for(var j = 0; j < engs.length; j++) {
-            var eLength = engs[j].displayname.length;
-            var lastIdx = engs[j].displayname.lastIndexOf(" ");
-            var eName = engs[j].displayname.substring(0, lastIdx);
-            var eUnit = engs[j].displayname.substring((lastIdx + 1), eLength);
-            var para1 = document.createElement("p");
-            para1 = $(para1).addClass("eng_text").text(eName);
-            var para2 = document.createElement("p");
-            para2 = $(para2).addClass("eng_text eng_spec").text(eUnit);
-            var para3 = document.createElement("h");
-            para3 = $(para3).addClass("eng_text eng_amt_curr_yr").text(engs[j].value);
-            var para4 = document.createElement("p");
-            para4 = $(para4).addClass("eng_text unit").text(engs[j].uom);
-            var eng_type_contr = document.createElement("div");
-            eng_type_contr = $(eng_type_contr).addClass("eng_type_container").append(para1, para2, para3, para4);
-            var arr = document.createElement("div");
-            if(engs[j].thresholdflag == false) {
-                arr = $(arr).addClass("icon-Down_Arrow arrow_contr");
-            } else {
-                arr = $(arr).addClass("icon-Up_Arrow arrow_contr");
+    $.ajax({
+        url: '../js/energyData.json',
+        type: 'get',
+        dataType: 'json',
+        error: function(data){
+            console.log("data", data);
+        },
+        success: function(data){
+            var energyValues = data;
+            for(var i = 0; i < energyValues.length; i++) {
+                if(i == 0) {
+                    var currCarousel = $("#myCarouselenergy");
+                    var type = "type1";
+                    var amount = "amount1";
+                } else if (i == 1) {
+                    var currCarousel = $("#myCarouselwater");
+                    var type = "type2";
+                    var amount = "amount2";
+                } else if(i == 2) {
+                    var currCarousel = $("#myCarouselgreen");
+                    var type = "type3";
+                    var amount = "amount3";
+                }
+                var key = Object.keys(energyValues[i]);
+
+                var engs = energyValues[i][key[0]];
+                for(var j = 0; j < engs.length; j++) {
+                    var eLength = engs[j].displayname.length;
+                    var lastIdx = engs[j].displayname.lastIndexOf(" ");
+                    var eName = engs[j].displayname.substring(0, lastIdx);
+                    var eUnit = engs[j].displayname.substring((lastIdx + 1), eLength);
+                    var para1 = document.createElement("p");
+                    para1 = $(para1).addClass("eng_text").text(eName);
+                    var para2 = document.createElement("p");
+                    para2 = $(para2).addClass("eng_text eng_spec").text(eUnit);
+                    var para3 = document.createElement("h");
+                    para3 = $(para3).addClass("eng_text eng_amt_curr_yr").text(engs[j].value);
+                    var para4 = document.createElement("p");
+                    para4 = $(para4).addClass("eng_text unit").text(engs[j].uom);
+                    var eng_type_contr = document.createElement("div");
+                    eng_type_contr = $(eng_type_contr).addClass("eng_type_container").append(para1, para2, para3, para4);
+                    var arr = document.createElement("div");
+                    if(engs[j].thresholdflag == false) {
+                        arr = $(arr).addClass("icon-Down_Arrow arrow_contr");
+                    } else {
+                        arr = $(arr).addClass("icon-Up_Arrow arrow_contr");
+                    }
+                    var arrSpec = document.createElement("div");
+                    arrSpec = $(arrSpec).addClass("arrow_spec").append(arr);
+                    var arrInd = document.createElement("div");
+                    arrInd = $(arrInd).addClass("eng_indicator").append(arrSpec);
+                    var aspec = document.createElement("p");
+                    aspec  = $(aspec).addClass("amount_spec").text(engs[j].rvalue);
+                    var aPrd = document.createElement("p");
+                    aPrd = $(aPrd).addClass("amount_spec period").text(engs[j].rvaluedesc);
+                    var aspecCoontr = document.createElement("div");
+                    aspecCoontr = $(aspecCoontr).addClass("amount_spec_contr").append(aspec, aPrd);
+                    var amountd = document.createElement("div");
+                    amountd = $(amountd).addClass("eng_amount").append(aspecCoontr);
+                    $(amountd).addClass(amount);
+                    var typ = document.createElement("div");
+                    typ = $(typ).addClass("eng_type").append(eng_type_contr, arrInd, amountd);
+                    $(typ).addClass(type);
+                    var engDesc = document.createElement("div");
+                    engDesc = $(engDesc).addClass("energy_description").append(typ);
+                    var itm = document.createElement("div");
+                    itm = $(itm).addClass("item").append(engDesc);
+                    if(j == 0) {
+                        $(itm).addClass("active");
+                    }
+                    var car = $(currCarousel).find(".carousel-inner.crsl_contr").append(itm);
+                } 
             }
-            var arrSpec = document.createElement("div");
-            arrSpec = $(arrSpec).addClass("arrow_spec").append(arr);
-            var arrInd = document.createElement("div");
-            arrInd = $(arrInd).addClass("eng_indicator").append(arrSpec);
-            var aspec = document.createElement("p");
-            aspec  = $(aspec).addClass("amount_spec").text(engs[j].rvalue);
-            var aPrd = document.createElement("p");
-            aPrd = $(aPrd).addClass("amount_spec period").text(engs[j].rvaluedesc);
-            var aspecCoontr = document.createElement("div");
-            aspecCoontr = $(aspecCoontr).addClass("amount_spec_contr").append(aspec, aPrd);
-            var amountd = document.createElement("div");
-            amountd = $(amountd).addClass("eng_amount").append(aspecCoontr);
-            $(amountd).addClass(amount);
-            var typ = document.createElement("div");
-            typ = $(typ).addClass("eng_type").append(eng_type_contr, arrInd, amountd);
-            $(typ).addClass(type);
-            var engDesc = document.createElement("div");
-            engDesc = $(engDesc).addClass("energy_description").append(typ);
-            var itm = document.createElement("div");
-            itm = $(itm).addClass("item").append(engDesc);
-            if(j == 0) {
-                $(itm).addClass("active");
-            }
-            var car = $(currCarousel).find(".carousel-inner.crsl_contr").append(itm);
-        } 
-    }
+        }
+    });
+
     var totalHeight = parseInt($(".hdr_container").css('height'), 10);
     $("#fullpage").fullpage({
         paddingTop: totalHeight,
@@ -192,7 +119,7 @@ $(document).ready(function() {
     $(".vr_slide").css("top", "-" + activePos + "px");
     var currBtn = $(".indv_btn").eq(activeEleIdx - 1);
     $(currBtn).find(".btn_icons").addClass("active_btn");
-    var ldrMsgMaxHgt = $('.fp-tableCell').height() - 100;
+    var ldrMsgMaxHgt = $('.fp-tableCell').height() - totalHeight - 20;
     $(".ldr_speech").css({"max-height": ldrMsgMaxHgt + "px"});
 
     //whether to show read more button in leader speak section ---- start
