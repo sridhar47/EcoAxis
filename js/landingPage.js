@@ -160,17 +160,16 @@ $(document).ready(function() {
             $('.slide_4.section.social_ftr').css({'height': 100 + "px"});
             $('.slide_4.section.social_ftr .fp-tableCell').css({'height': 100 + 'px'});
         },
-        // onLeave : function (index, nextIndex, direction) {
-        //     console.log("index", index);
-        //     console.log("nextIndex", nextIndex);
-        //     console.log("direction", direction);
-        //     if((direction == "up" || direction == "down") && (nextIndex == 2)) {
-        //         console.log("We are in 2");
-        //         $("#fullpage").css({"padding-top": totalHeight + "px"});
-        //     } else {
-        //         document.getElementById('fullpage').style['padding-top'] = null;
-        //     }
-        // }
+        onLeave : function (index, nextIndex, direction) {
+            if(nextIndex == 2){
+                var slideHeight = $('#fullpage .slide_1').height();
+                var t = 'translate3d(0px, -'+(slideHeight)+ 'px, 0px)';
+                setTimeout(function(){
+                    $('#fullpage .slide_2').css({'padding-top': (Math.ceil(totalHeight/2)) +'px'})
+                    $("#fullpage").css({"transform": t });
+                }, 0)
+            }
+        }
     });
 
     var p = $('.fp-tableCell').height() - $('.slider_body_container').height() - $('.slider_body_footer').height();
