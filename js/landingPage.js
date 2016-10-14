@@ -89,7 +89,7 @@ $(document).ready(function() {
         onLeave : function (index, nextIndex, direction) {
            if(nextIndex == 2){
                var slideHeight = $('#fullpage .slide_1').height();
-               var t = 'translate3d(0px, -'+(slideHeight)+ 'px, 0px)';
+               var t = 'translate3d(0px, -'+(slideHeight + 1)+ 'px, 0px)';
                setTimeout(function(){
                    $('#fullpage .slide_2').css({'padding-top': (Math.ceil(totalHeight/2)) +'px'})
                    $("#fullpage").css({"transform": t });
