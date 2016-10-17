@@ -78,7 +78,6 @@ $(document).ready(function() {
             }
         }
     });
-
     var headerHeight = parseInt($(".hdr_container").css('height'), 10);
     var applyFullPagePlugin = function () {
         console.log("applyFullPagePlugin called");
