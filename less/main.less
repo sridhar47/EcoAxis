@@ -19,257 +19,260 @@
 	}
 }
 html {
-	.modal-open {
-		#logInModal {
-			padding-right: 0px;
-			padding-left: 0px;
-			z-index: 9999999;
-			.login_dialog {
-				width: 100%;
-				margin: 0px;
-				.login_content {
-					border-radius: 0px;
-					background-color: transparent;
-					.login_header {
-						text-align: center;
-			    		text-transform: uppercase;
-			    		border-bottom: 0px;
-			    		padding-right: 95px;
-			    		.login_title {
-			    			color: #279a35;
-			    		}
-			    		button {
-			    			font-size: 45px;
-						    color: #096b16;
-						    opacity: 1;
-						    outline: none;
-			    		}
-					}
-				}
-				.credential {
-					padding: 50px 0px;
+	#logInModal {
+		padding-right: 0px;
+		padding-left: 0px;
+		z-index: 9999999;
+		.login_dialog {
+			width: 100%;
+			margin: 0px;
+			.login_content {
+				border-radius: 0px;
+				background-color: transparent;
+				max-width: 1366px;
+				.login_header {
 					text-align: center;
-					.login_box {
-						width: 80%;
-						margin: 0 auto;
-						background-color: #fff;
-						opacity: 1;
-						background-color: #fff;
-						padding: 30px 0px;
-						.input_header {
-							text-transform: uppercase;
-						    color: #4e7b1e;
-						    font-weight: bold;
-						    margin-bottom: 60px;
-						    margin-top: 0px;
-						    letter-spacing: 1px;
-    						word-spacing: 3px;
-						}
-						input {
-							transition: all 0.2s;
-							width: 50%;
-							border: none;
-							outline: none;
-							height: 40px;
-							border-bottom: 2px solid #4e7b1e;
-							font-size: 20px;
-							color: #595959;
-						}
-						#user_pwd {
-							display: none;
-						}
+		    		text-transform: uppercase;
+		    		border-bottom: 0px;
+		    		padding-right: 95px;
+		    		.login_title {
+		    			color: #279a35;
+		    		}
+		    		button {
+		    			font-size: 45px;
+					    color: #096b16;
+					    opacity: 1;
+					    outline: none;
+		    		}
+				}
+			}
+			.credential {
+				padding: 50px 0px;
+				text-align: center;
+				.login_box {
+					width: 80%;
+					margin: 0 auto;
+					background-color: #fff;
+					opacity: 1;
+					background-color: #fff;
+					padding: 30px 0px;
+					.input_header {
+						text-transform: uppercase;
+					    color: #4e7b1e;
+					    font-weight: bold;
+					    margin-bottom: 60px;
+					    margin-top: 0px;
+					    letter-spacing: 1px;
+						word-spacing: 3px;
+					}
+					input {
+						transition: all 0.2s;
+						width: 50%;
+						border: none;
+						outline: none;
+						height: 40px;
+						border-bottom: 2px solid #4e7b1e;
+						font-size: 20px;
+						color: #595959;
+					}
+					#user_pwd {
+						display: none;
 					}
 				}
 			}
 		}
-		#ClientModal {
-			z-index: 9999999;
-			.read_more_dialog {
-				margin-top: 5%;
-				width: 100%;
-    			margin: 0;
-				.rm_content {
-					border-radius: 0px;
+	}
+	#ClientModal {
+		z-index: 9999999;
+		.read_more_dialog {
+			margin-top: 5%;
+			width: 100%;
+			margin: 0;
+			.rm_content {
+				max-width: 1366px;
+				border-radius: 0px;
+			    border-bottom: 0px;
+				padding-top: 35px;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				.rm_hdr {
+					text-align: center;
+				    text-transform: uppercase;
+				    font-size: 17px;
+				    color: #16a085;
+				    font-weight: bolder;
+				    padding-right: 95px;
 				    border-bottom: 0px;
+				    button {
+				    	    margin-top: -20px;
+						    font-size: 60px;
+						    color: green;
+						    opacity: 1;
+						    outline: none;
+				    }
+				}
+				.more_content {
+					font-size: 20px;
+					color: #595959;
+					padding: 30px 70px 60px;
+	    			line-height: 30px;
+				}
+			}
+		}
+	}
+	#featureModal {
+		background: rgba(255, 255, 255, 0.78);
+		z-index: 9999999;
+		padding-right: 0px;
+		.ftr_dialog_popup {
+			width: 100%;
+			position: relative;
+			margin: 0px;
+			.ftr_content_popup {
+				max-width: 1366px;
+				border-radius: 0;
+				box-shadow: none;
+				z-index: 9999999;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				.ftr_hdr_popup {
+					border-bottom: 0px;
+					padding-right: 95px;
 					padding-top: 35px;
-					overflow-x: hidden;
-					overflow-y: scroll;
-					.rm_hdr {
+					.close {
+						font-size: 60px;
+	    				color: #047d04;
+	    				margin-top: -20px;
+	    				opacity: 1;
+	    				font-weight: normal;
+	    				outline: none;
+					}
+					.ftr_title_popup {
 						text-align: center;
 					    text-transform: uppercase;
 					    font-size: 17px;
 					    color: #16a085;
 					    font-weight: bolder;
-					    padding-right: 95px;
-					    border-bottom: 0px;
-					    button {
-					    	    margin-top: -20px;
-							    font-size: 60px;
-							    color: green;
-							    opacity: 1;
-							    outline: none;
-					    }
 					}
-					.more_content {
-						font-size: 20px;
+				}
+				.ftr_body_popup {
+					padding: 70px;
+					.popup_img {
+						width: 100%;
+						padding: 0px 100px 30px;
+						overflow: hidden;
+						.pimg_indv {
+							width: 44%;
+							display: inline-block;
+						}
+						.left_img {
+							height: 200px;
+							float: left;
+						}
+						.right_img {
+							height: 200px;
+							float: right;
+						}
+					}
+					.ftr_popup_text {
+						clear: both;
 						color: #595959;
-						padding: 30px 70px 60px;
-		    			line-height: 30px;
+						font-size: 17px;
+						line-height: 25px;
+						text-align: center;     
+						text-align: -webkit-center;
 					}
 				}
 			}
 		}
-		#featureModal {
-			background: rgba(255, 255, 255, 0.78);
-			z-index: 9999999;
-			padding-right: 0px;
-			.ftr_dialog_popup {
-				width: 100%;
-				position: relative;
-				margin: 0px;
-				.ftr_content_popup {
-					border-radius: 0;
-					box-shadow: none;
-					z-index: 9999999;
-					.ftr_hdr_popup {
-						border-bottom: 0px;
-						padding-right: 95px;
-						padding-top: 35px;
-						.close {
-							font-size: 60px;
-		    				color: #047d04;
-		    				margin-top: -20px;
-		    				opacity: 1;
-		    				font-weight: normal;
-		    				outline: none;
-						}
-						.ftr_title_popup {
-							text-align: center;
-						    text-transform: uppercase;
-						    font-size: 17px;
-						    color: #16a085;
-						    font-weight: bolder;
+	}
+	#leaderModal {
+		z-index: 9999999;
+		.leader_dialog {
+			width: 100%;
+			margin: 0px;
+			.leader_content {
+				max-width: 1366px;
+				border-radius: 0;
+				box-shadow: none;
+				z-index: 9999999;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				.leader_hdr {
+					border-bottom: 0px;
+					padding-right: 95px;
+					padding-top: 35px;
+					.close {
+						font-size: 60px;
+	    				color: #047d04;
+	    				margin-top: -20px;
+	    				opacity: 1;
+	    				font-weight: normal;
+	    				outline: none;
+					}
+					.leader_title {
+						text-transform: uppercase;
+						font-size: 17px;
+					    color: #16a085;
+					    text-align: center;
+					    font-weight: bolder;
+					    padding-left: 5%;
+					}
+				}
+				.leader_body {
+					.ldr_msg_sec {
+						width: 70%;
+						display: inline-block;
+						padding: 30px 2%;
+						vertical-align: top;
+						vertical-align: top;
+						.ldr_msg_para {
+							font-size: 20px;
+    						line-height: 30px;
+    						color: #595959;
+    						margin-bottom: 30px;
 						}
 					}
-					.ftr_body_popup {
-						padding: 70px;
-						.popup_img {
-							width: 100%;
-							padding: 0px 100px 30px;
+					.ldr_identity_sec {
+						width: 29%;
+						display: inline-block;
+						padding: 100px 5% 30px;
+						text-align: center;
+						.ldr_id {
+							width: 150px;
+							height: 150px;
+							border-radius: 50%;
+							background-color: #fff;
 							overflow: hidden;
-							.pimg_indv {
-								width: 44%;
-								display: inline-block;
-							}
-							.left_img {
-								height: 200px;
-								float: left;
-							}
-							.right_img {
-								height: 200px;
-								float: right;
-							}
-						}
-						.ftr_popup_text {
-							clear: both;
-							color: #595959;
-							font-size: 17px;
-							line-height: 20px;
-							text-align: center;     
-							text-align: -webkit-center;
-						}
-					}
-				}
-			}
-		}
-		#leaderModal {
-			z-index: 9999999;
-			.leader_dialog {
-				width: 100%;
-				margin: 0px;
-				.leader_content {
-					border-radius: 0;
-					box-shadow: none;
-					z-index: 9999999;
-					overflow-x: hidden;
-					overflow-y: scroll;
-					.leader_hdr {
-						border-bottom: 0px;
-						padding-right: 95px;
-						padding-top: 35px;
-						.close {
-							font-size: 60px;
-		    				color: #047d04;
-		    				margin-top: -20px;
-		    				opacity: 1;
-		    				font-weight: normal;
-		    				outline: none;
-						}
-						.leader_title {
-							text-transform: uppercase;
-							font-size: 17px;
-						    color: #16a085;
-						    text-align: center;
-						    font-weight: bolder;
-						    padding-left: 5%;
-						}
-					}
-					.leader_body {
-						.ldr_msg_sec {
-							width: 70%;
 							display: inline-block;
-							padding: 30px 2%;
-							vertical-align: top;
-							vertical-align: top;
-							.ldr_msg_para {
-								font-size: 20px;
-	    						line-height: 30px;
-	    						color: #595959;
-	    						margin-bottom: 30px;
-							}
-						}
-						.ldr_identity_sec {
-							width: 29%;
-							display: inline-block;
-							padding: 100px 5% 30px;
-							text-align: center;
-							.ldr_id {
+							img {
 								width: 150px;
-								height: 150px;
-								border-radius: 50%;
-								background-color: #fff;
-								overflow: hidden;
-								display: inline-block;
-								img {
-									width: 150px;
-									height: auto;
-									max-width: 100%;
-								}
+								height: auto;
+								max-width: 100%;
 							}
-							.ldr_name {
-								    text-transform: uppercase;
-								    font-size: 18px;
-								    padding-top: 15px;
-								    margin-bottom: 0;
-							}
+						}
+						.ldr_name {
+							    text-transform: uppercase;
+							    font-size: 18px;
+							    padding-top: 15px;
+							    margin-bottom: 0;
 						}
 					}
 				}
 			}
 		}
-		#user_mail::-webkit-input-placeholder {
-		   text-align: center;
-		}
-		#user_mail:-moz-placeholder {
-		   text-align: center;  
-		}
-		#user_mail::-moz-placeholder {
-		   text-align: center;  
-		}
-		#user_mail:-ms-input-placeholder {  
-		   text-align: center; 
-		}
-
+	}
+	.auth::-webkit-input-placeholder {
+	   text-align: center;
+	}
+	.auth:-moz-placeholder {
+	   text-align: center;  
+	}
+	.auth::-moz-placeholder {
+	   text-align: center;  
+	}
+	.auth:-ms-input-placeholder {  
+	   text-align: center; 
 	}
 }
 

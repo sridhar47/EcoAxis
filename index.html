@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css">
+	<link rel="stylesheet" type="text/css" href="bxslider/jquery.bxslider.css">
 	<!--<link href="http://vjs.zencdn.net/5.11.7/video-js.css" rel="stylesheet">-->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.6/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="bxslider/jquery.bxslider.min.js"></script>
 	<!--<script src="http://vjs.zencdn.net/5.11.7/video.js"></script>-->
 	<link rel="stylesheet" type="text/css" href="css/main.min.css">
 </head>
@@ -19,7 +20,7 @@
 		<header class="declaration_hdr">
 			<div class="container hdr_container inter">
 				<div class="row header_row">
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 content_cols">
+					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-7 content_cols">
 						<div class="row content_row">
 							<div class="ate">
 								<div class="comp_logo">
@@ -33,12 +34,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 hidden-lg hidden-md hidden-sm login_button1">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-5 hidden-lg hidden-md hidden-sm login_button1">
 						<span class="login icon-login" data-toggle="modal" data-target="#logInModal">
 						</span>
 					</div>
-					<div class="line hidden-lg hidden-md hidden-sm col-xs-12" style="height:1px; margin-top: 10px; margin-bottom: 5px;">
-						<div style="width: 80%; margin: 0 auto; background-color: rgba(189, 189, 189, 0.72); height: 1px">
+					<div class="line hidden-lg hidden-md hidden-sm col-xs-12" style="height:2px; margin-top: 10px; margin-bottom: 5px;">
+						<div style="width: 80%; margin: 0 auto; background-color: rgba(189, 189, 189, 0.72); height: 2px">
 						</div>
 					</div>
 					<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 client">
@@ -71,12 +72,8 @@
 					<!--</video>-->
 				<!--</div>-->
 				<div class="slider_body_container">
-					<div class="vertical_slide_btn up_btn">
-						<span class="icon-Up_Arrow up_slide">
-						</span>
-					</div>
 					<div class="container slider_container">
-						<div class="slider_btns">
+						<!-- <div class="slider_btns">
 							<div class="indv_btn">
 								<span class="btn_icons">
 								</span>
@@ -89,115 +86,109 @@
 								<span class="btn_icons">
 								</span>
 							</div>
-						</div>
-						<div class="slides">
-							<div class="vr_slide">
-								<div class="individual_slide active">
-									<div class="slide_content">
-										<div class="slide_left">
-											<div class="icon-left_slide icon_custom">
-											</div>
-											<a class="left carousel-control" href="#myCarouselenergy" role="button" data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-								      			<span class="sr-only">Previous</span>
-								      		</a>
+						</div> -->
+						<ul class="slides bxslider">
+							<li class="individual_slide">
+								<div class="slide_content">
+									<div class="slide_left">
+										<div class="icon-left_slide icon_custom">
 										</div>
-										<div class="eco_container">
-											<div class="energy_image">
-												<div class="img_container icon-fire">
-												</div>
-											</div>
-											<p class="energy_title title1">
-												energy consumption
-											</p>
-											<div id="myCarouselenergy" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
-												<div class="carousel-inner crsl_contr" role="listbox">
-													
-												</div>
+										<a class="left carousel-control" href="#myCarouselenergy" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							      			<span class="sr-only">Previous</span>
+							      		</a>
+									</div>
+									<div class="eco_container">
+										<div class="energy_image">
+											<div class="img_container icon-fire">
 											</div>
 										</div>
-										<div class="slide_right">
-											<div class="icon-right_slide icon_custom">
+										<p class="energy_title title1">
+											energy consumption
+										</p>
+										<div id="myCarouselenergy" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+											<div class="carousel-inner crsl_contr" role="listbox">
+												
 											</div>
-											<a class="right carousel-control" href="#myCarouselenergy" role="button" data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									      		<span class="sr-only">Next</span>
-									    	</a>
 										</div>
 									</div>
-								</div>
-								<div class="individual_slide left_space">
-									<div class="slide_content">
-										<div class="slide_left">
-											<div class="icon-left_slide icon_custom">
-											</div>
-											<a class="left carousel-control" href="#myCarouselwater" role="button" data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-								      			<span class="sr-only">Previous</span>
-								      		</a>
+									<div class="slide_right">
+										<div class="icon-right_slide icon_custom">
 										</div>
-										<div class="eco_container">
-											<div class="energy_image">
-												<div class="img_container icon-water">
-												</div>
-											</div>
-											<p class="energy_title title2">
-												water consumption
-											</p>
-											<div id="myCarouselwater" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
-												<div class="carousel-inner crsl_contr" role="listbox">
-												</div>
-											</div>
-										</div>
-										<div class="slide_right">
-											<div class="icon-right_slide icon_custom">
-											</div>
-											<a class="right carousel-control" href="#myCarouselwater" role="button" data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									      		<span class="sr-only">Next</span>
-									    	</a>
-										</div>
+										<a class="right carousel-control" href="#myCarouselenergy" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								      		<span class="sr-only">Next</span>
+								    	</a>
 									</div>
 								</div>
-								<div class="individual_slide left_space">
-									<div class="slide_content">
-										<div class="slide_left">
-											<div class="icon-left_slide icon_custom">
-											</div>
-											<a class="left carousel-control" href="#myCarouselgreen" role="button" data-slide="prev">
-												<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-								      			<span class="sr-only">Previous</span>
-								      		</a>
+							</li>
+							<li class="individual_slide left_space">
+								<div class="slide_content">
+									<div class="slide_left">
+										<div class="icon-left_slide icon_custom">
 										</div>
-										<div class="eco_container">
-											<div class="energy_image">
-												<div class="img_container icon-green">
-												</div>
-											</div>
-											<p class="energy_title title3">
-												green house gas emission
-											</p>
-											<div id="myCarouselgreen" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
-												<div class="carousel-inner crsl_contr" role="listbox">
-												</div>
+										<a class="left carousel-control" href="#myCarouselwater" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							      			<span class="sr-only">Previous</span>
+							      		</a>
+									</div>
+									<div class="eco_container">
+										<div class="energy_image">
+											<div class="img_container icon-water">
 											</div>
 										</div>
-										<div class="slide_right">
-											<div class="icon-right_slide icon_custom">
+										<p class="energy_title title2">
+											water consumption
+										</p>
+										<div id="myCarouselwater" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+											<div class="carousel-inner crsl_contr" role="listbox">
 											</div>
-											<a class="right carousel-control" href="#myCarouselgreen" role="button" data-slide="next">
-												<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-									      		<span class="sr-only">Next</span>
-									    	</a>
 										</div>
 									</div>
+									<div class="slide_right">
+										<div class="icon-right_slide icon_custom">
+										</div>
+										<a class="right carousel-control" href="#myCarouselwater" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								      		<span class="sr-only">Next</span>
+								    	</a>
+									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="vertical_slide_btn down_btn">
-						<span class="icon-Down_Arrow down_slide">
-						</span>
+							</li>
+							<li class="individual_slide left_space">
+								<div class="slide_content">
+									<div class="slide_left">
+										<div class="icon-left_slide icon_custom">
+										</div>
+										<a class="left carousel-control" href="#myCarouselgreen" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							      			<span class="sr-only">Previous</span>
+							      		</a>
+									</div>
+									<div class="eco_container">
+										<div class="energy_image">
+											<div class="img_container icon-green">
+											</div>
+										</div>
+										<p class="energy_title title3">
+											green house gas emission
+										</p>
+										<div id="myCarouselgreen" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
+											<div class="carousel-inner crsl_contr" role="listbox">
+											</div>
+										</div>
+									</div>
+									<div class="slide_right">
+										<div class="icon-right_slide icon_custom">
+										</div>
+										<a class="right carousel-control" href="#myCarouselgreen" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								      		<span class="sr-only">Next</span>
+								    	</a>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="slider_body_footer">
@@ -299,7 +290,7 @@
 									</a>
 								</div>
 				  			</div>
-				  			<div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 client_features">
+				  			<div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 client_features">
 								<div class="feature">
 									features
 								</div>
@@ -319,6 +310,10 @@
 												<li data-target="#myCarousel" data-slide-to="1" class="ftr_indv"></li>
 												<li data-target="#myCarousel" data-slide-to="2" class="ftr_indv"></li>
 												<li data-target="#myCarousel" data-slide-to="3" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="4" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="5" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="6" class="ftr_indv"></li>
+												<li data-target="#myCarousel" data-slide-to="7" class="ftr_indv"></li>
 										    </ol>
 									    	<div class="carousel-inner ftrs_content" role="listbox" data-toggle="modal" data-target="#featureModal">
 											    <div class="item active">
